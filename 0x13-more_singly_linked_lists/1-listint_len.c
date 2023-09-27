@@ -2,21 +2,17 @@
 #include <stddef.h>
 
 /**
- * main: check the code
+ * listint_len -  returns the number of elements in a linked listint_t list
+ * @h: pointer to head of singly linked list
  *
- * Return number of elements
- * Description : size_t listint_len(const listint_t *h)
+ * Return: Number of elements in list
  */
-
 size_t listint_len(const listint_t *h)
 {
 	unsigned int size = 0;
 
-	while(h != NULL)
-	{
-		printf("%i\n", h->n);
-		h = h-> next;
-		size++;
-		return(size);
-	}
+	while (h != 0)
+		h = h->next, size++;
+
+	return (size);
 }

@@ -1,14 +1,11 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#inlcude "hash_tables.h"
+#include "hash_tables.h"
 
 /**
- * main - check the code for
+ * hash_table_create - Creates a hash table.
+ * @size: the size, in number of nodes, to make the new hash table.
  *
- * Return: Always EXIT_SUCCESS.
+ * Return: a pointer to the newly created hash table.
  */
-
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	unsigned int i = 0;
@@ -28,7 +25,8 @@ hash_table_t *hash_table_create(unsigned long int size)
 		return (NULL);
 	}
 
-	for(; i<size;i++)
-	    ht->array[i] = NULL;
+	for (; i < size; i++)
+		ht->array[i] = NULL;
 
-	return(ht);
+	return (ht);
+}
